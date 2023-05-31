@@ -22,3 +22,13 @@ button {
     padding: 8px 12px;
     cursor: pointer;
 }
+valid {
+border-color: green;
+}
+invalid{
+    border-color: red;
+}
+picture{
+
+   gap: 30px
+}

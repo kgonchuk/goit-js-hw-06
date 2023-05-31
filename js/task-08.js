@@ -1,25 +1,28 @@
 const formEl = document.querySelector('.login-form');
-console.dir(formEl);
+
+const inputs = document.querySelectorAll('input');
+
+
 formEl.addEventListener('submit', onSubmit);
 function onSubmit(evt) {
+   
     evt.preventDefault();
 
-    if ( formEl.value === '') {
-        alert ('Порожні поля!') 
-    
-    } else {
-        const {email, password } = evt.currentTarget.elements;
+const {email, password } = evt.currentTarget.elements;
 console.log(email.value);
-    console.log(password.value);
+console.log(password.value);
     
     const inpEl = {
         name: email.value,
-        name: password.value
+        name: password.value,
         
-}
+    };
+   inputs.forEach(input => {
+    if (input.value.trim() === ''){
+    alert ("Порожні рядки!")
+    }
+   }) 
+     evt.target.reset();
 }
 
-
-
-}
 
