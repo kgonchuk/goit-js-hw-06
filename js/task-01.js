@@ -10,8 +10,6 @@ items.forEach((element) => {
     const oneEl = element.querySelectorAll('li');
     const titleElQty = oneEl.length;
 
-    // console.log(elTitle);
-    // console.log(titleElQty);
     console.log(`Category: ${elTitle} \n Elements: ${titleElQty}`)
 })
 

@@ -19,6 +19,8 @@ console.dir(gallery)
 const galleryup = images.map((image) => `<li><img src="${image.url}" alt = "${image.alt}" width = "400" height ="300"></li>`).join('');
 
 gallery.insertAdjacentHTML("beforeend", galleryup);
-galleryup.classList.add("picture");
-
-
+gallery.style.backgroundColor = 'beige ';
+gallery.style.display  = "flex";
+gallery.style.flexWrap = 'wrap';
+gallery.style.gap = '20px'
+gallery.style.listStyle = 'none  '

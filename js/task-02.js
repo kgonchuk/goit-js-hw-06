@@ -40,3 +40,4 @@ itemEl6.classList.add('item');
 const ingredientsList = document.querySelector(".ingredients");
 list.append(itemEl, itemEl1, itemEl2, itemEl3, itemEl4, itemEl5, itemEl6 );
 console.dir(list.textContent)
+console.log(list)
