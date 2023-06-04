@@ -10,20 +10,14 @@ const counter = {
 
 
 const valueEl = document.querySelector('#value');
-console.log(counter)
 const decrementBtn = document.querySelector('[data-action="decrement"]');
-console.log(decrementBtn)
 const incrementBtn = document.querySelector('[ data-action="increment"]');
-console.log(incrementBtn);
-
 decrementBtn.addEventListener('click', function () {
     counter.decrement();
-    console.log(counter);
     valueEl.textContent = counter.value;
 });
 
 incrementBtn.addEventListener('click', function () {
     counter.increment();
-    console.log(counter);
     valueEl.textContent = counter.value;
 })

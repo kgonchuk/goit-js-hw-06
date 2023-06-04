@@ -8,32 +8,22 @@ const createBtn = document.querySelector('button[data-create]');
 const desrtoyBtn = document.querySelector('button[data-destroy]');
 const boxEl = document.querySelector('#boxes')
 
-
-
-
-
 function createBoxes(amount){
-  for(let i = 0; i < 0; i += 1){
-    let elem = document.createElement('div');
-    elem.style.width = 30; 
-    elem.style.height = 30;
+  for(let i = 0; i < amount; i += 1){
+    const elem = document.createElement('div');
+    elem.style.width = 30 + (10 * i)+'px'; 
+    elem.style.height = 30 +'px';
     elem.style.backgroundColor = getRandomHexColor();
     boxEl.append(elem);
   }
 }
-createBtn.addEventListener('clack', onCreate);
+createBtn.addEventListener('click', onCreate);
 function onCreate(){
-  const quant = input.value;
-  if(quant > 0){
+  const amount = input.value;
+  if(amount > 0){
     createBoxes(amount)
   }
 };
-input.addEventListener('change', onChange);
-let amount = 0;
-function onChange(evt){
-  amount = evt.target.value
-};
-
 desrtoyBtn.addEventListener('click', onDestroy );
 function onDestroy(){
   boxEl.innerHTML  = '';
