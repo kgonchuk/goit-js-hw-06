@@ -12,10 +12,10 @@ function createBoxes(amount){
   for(let i = 0; i < amount; i += 1){
     const elem = document.createElement('div');
     elem.style.width = 30 + (10 * i)+'px'; 
-    elem.style.height = 30 +'px';
+    elem.style.height = 30 +(10 * i)+'px';
     elem.style.backgroundColor = getRandomHexColor();
-    boxEl.append(elem);
-  }
+    
+  }boxEl.append(elem);
 }
 createBtn.addEventListener('click', onCreate);
 function onCreate(){
